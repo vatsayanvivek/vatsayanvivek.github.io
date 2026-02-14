@@ -1,0 +1,8 @@
+*.pdf
+*.jpeg
+*.png
+!profile.jpg
+portfolio-prompt-for-claude.txt
+.venv/
+__pycache__/
+.DS_Store
