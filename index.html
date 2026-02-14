@@ -287,7 +287,7 @@
             transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.4s;
             padding: 0 22px;
         }
-        .skill-accordion.active .skill-accordion-body { max-height: 200px; padding: 0 22px 18px; }
+        .skill-accordion.active .skill-accordion-body { max-height: 300px; padding: 0 22px 18px; }
         .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
         .skill-tag {
             padding: 6px 14px; background: rgba(0,229,255,0.06);
@@ -324,6 +324,8 @@
         .skill-bar-fill.bar-devsecops { background: linear-gradient(90deg, #7c4dff, #ff6090); color: #ff6090; }
         .skill-bar-fill.bar-iac { background: linear-gradient(90deg, #00e676, #00e5ff); color: #00e5ff; }
         .skill-bar-fill.bar-monitoring { background: linear-gradient(90deg, #ff6090, #FFD93D); color: #FFD93D; }
+        .skill-bar-fill.bar-genai { background: linear-gradient(90deg, #a855f7, #ec4899); color: #ec4899; }
+        .skill-bar-fill.bar-supplychain { background: linear-gradient(90deg, #14b8a6, #06b6d4); color: #06b6d4; }
         .skill-bars-animated .skill-bar-fill { width: var(--bar-width); }
 
         /* ========== CERTIFICATIONS — BADGE WALL ========== */
@@ -426,6 +428,8 @@
         .case-banner-1 { background: linear-gradient(135deg, #0f3460, #16213e, #1a1a2e); }
         .case-banner-2 { background: linear-gradient(135deg, #1a0033, #2d1b69, #0f3460); }
         .case-banner-3 { background: linear-gradient(135deg, #0a2e1a, #1a3a2a, #0f3460); }
+        .case-banner-4 { background: linear-gradient(135deg, #2d1b69, #0f3460, #1a0033); }
+        .case-banner-5 { background: linear-gradient(135deg, #1a1a2e, #0a2e1a, #16213e); }
         .case-banner-icon {
             font-size: 3rem; opacity: 0.3; position: relative; z-index: 1;
             animation: float 4s ease-in-out infinite;
@@ -741,7 +745,7 @@
                     <div class="skill-accordion-header">
                         <div class="skill-accordion-icon">☁️</div>
                         <div class="skill-accordion-title">Cloud Platforms</div>
-                        <div class="skill-accordion-count">11</div>
+                        <div class="skill-accordion-count">16</div>
                         <svg class="skill-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                     <div class="skill-accordion-body">
@@ -749,7 +753,9 @@
                             <span class="skill-tag">AWS</span><span class="skill-tag">Azure</span><span class="skill-tag">GCP</span>
                             <span class="skill-tag">EC2</span><span class="skill-tag">ECS</span><span class="skill-tag">EKS</span>
                             <span class="skill-tag">Lambda</span><span class="skill-tag">S3</span><span class="skill-tag">Landing Zones</span>
-                            <span class="skill-tag">Bedrock</span><span class="skill-tag">SageMaker</span>
+                            <span class="skill-tag">Security Hub</span><span class="skill-tag">Azure Synapse</span>
+                            <span class="skill-tag">Azure FinOps</span><span class="skill-tag">Databricks</span>
+                            <span class="skill-tag">Bedrock</span><span class="skill-tag">SageMaker</span><span class="skill-tag">CloudFormation</span>
                         </div>
                     </div>
                 </div>
@@ -757,7 +763,7 @@
                     <div class="skill-accordion-header">
                         <div class="skill-accordion-icon">🛡️</div>
                         <div class="skill-accordion-title">Security &amp; Compliance</div>
-                        <div class="skill-accordion-count">10</div>
+                        <div class="skill-accordion-count">14</div>
                         <svg class="skill-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                     <div class="skill-accordion-body">
@@ -767,6 +773,8 @@
                             <span class="skill-tag">NIST 800-53</span><span class="skill-tag">PCI DSS</span>
                             <span class="skill-tag">SOC 2</span><span class="skill-tag">CIS Benchmarks</span>
                             <span class="skill-tag">CSPM</span><span class="skill-tag">Threat Modeling</span>
+                            <span class="skill-tag">AWS Security Hub</span><span class="skill-tag">Microsoft Sentinel</span>
+                            <span class="skill-tag">Runtime Security</span><span class="skill-tag">SAST / DAST</span>
                         </div>
                     </div>
                 </div>
@@ -774,7 +782,7 @@
                     <div class="skill-accordion-header">
                         <div class="skill-accordion-icon">🐳</div>
                         <div class="skill-accordion-title">Containers &amp; Orchestration</div>
-                        <div class="skill-accordion-count">9</div>
+                        <div class="skill-accordion-count">12</div>
                         <svg class="skill-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                     <div class="skill-accordion-body">
@@ -783,6 +791,7 @@
                             <span class="skill-tag">EKS</span><span class="skill-tag">AKS</span><span class="skill-tag">OpenShift</span>
                             <span class="skill-tag">Helm</span><span class="skill-tag">Argo CD</span>
                             <span class="skill-tag">Service Mesh</span><span class="skill-tag">Network Policies</span>
+                            <span class="skill-tag">Runtime Security</span><span class="skill-tag">Pod Security Standards</span><span class="skill-tag">Admission Controllers</span>
                         </div>
                     </div>
                 </div>
@@ -790,14 +799,39 @@
                     <div class="skill-accordion-header">
                         <div class="skill-accordion-icon">🔗</div>
                         <div class="skill-accordion-title">Supply Chain Security</div>
-                        <div class="skill-accordion-count">7</div>
+                        <div class="skill-accordion-count">16</div>
                         <svg class="skill-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                     <div class="skill-accordion-body">
                         <div class="skill-tags">
                             <span class="skill-tag">SLSA (L1/L2)</span><span class="skill-tag">SBOM Enforcement</span>
-                            <span class="skill-tag">Image Signing</span><span class="skill-tag">ChainGuard</span>
-                            <span class="skill-tag">Trivy</span><span class="skill-tag">Prisma Cloud</span><span class="skill-tag">Mend</span>
+                            <span class="skill-tag">Image Signing</span><span class="skill-tag">Cosign / Sigstore</span>
+                            <span class="skill-tag">Build Provenance</span><span class="skill-tag">Artifact Attestation</span>
+                            <span class="skill-tag">CIS Docker Benchmarks</span><span class="skill-tag">Base Image Hardening</span>
+                            <span class="skill-tag">OCI Compliance</span><span class="skill-tag">Dependency Scanning</span>
+                            <span class="skill-tag">ChainGuard</span><span class="skill-tag">Registry Scanning</span>
+                            <span class="skill-tag">Trivy</span><span class="skill-tag">Prisma Cloud</span>
+                            <span class="skill-tag">Mend</span><span class="skill-tag">Snyk</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-accordion" data-accordion>
+                    <div class="skill-accordion-header">
+                        <div class="skill-accordion-icon">🧠</div>
+                        <div class="skill-accordion-title">Secure GenAI &amp; MLOps</div>
+                        <div class="skill-accordion-count">16</div>
+                        <svg class="skill-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="skill-accordion-body">
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS SageMaker</span><span class="skill-tag">AWS Bedrock</span>
+                            <span class="skill-tag">OpenAI API</span><span class="skill-tag">Azure OpenAI</span>
+                            <span class="skill-tag">Azure Synapse</span><span class="skill-tag">Databricks</span>
+                            <span class="skill-tag">MLOps Pipelines</span><span class="skill-tag">Model Training Jobs</span>
+                            <span class="skill-tag">Model Approval Gates</span><span class="skill-tag">Model Publishing</span>
+                            <span class="skill-tag">Data Preparation</span><span class="skill-tag">Feature Store</span>
+                            <span class="skill-tag">Prompt Injection Defense</span><span class="skill-tag">Model Drift Detection</span>
+                            <span class="skill-tag">AI Cost Governance</span><span class="skill-tag">GenAI Security Controls</span>
                         </div>
                     </div>
                 </div>
@@ -886,6 +920,14 @@
                     <div class="skill-bar-item">
                         <div class="skill-bar-header"><span class="skill-bar-label">Monitoring &amp; Observability</span><span class="skill-bar-pct">85%</span></div>
                         <div class="skill-bar-track"><div class="skill-bar-fill bar-monitoring" style="--bar-width:85%"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header"><span class="skill-bar-label">Secure GenAI &amp; MLOps</span><span class="skill-bar-pct">88%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill bar-genai" style="--bar-width:88%"></div></div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header"><span class="skill-bar-label">Supply Chain Security</span><span class="skill-bar-pct">91%</span></div>
+                        <div class="skill-bar-track"><div class="skill-bar-fill bar-supplychain" style="--bar-width:91%"></div></div>
                     </div>
                 </div>
             </div>
@@ -1022,8 +1064,8 @@
                     <div class="case-card-tags">
                         <span class="case-tag">Azure</span><span class="case-tag">Zero Trust</span><span class="case-tag">PAM</span>
                     </div>
-                    <div class="case-card-title">Zero Trust Landing Zone for Morgan Stanley</div>
-                    <div class="case-card-desc">Designed and implemented an identity-centric Azure Landing Zone replacing perimeter-based security with Zero Trust micro-segmentation, PAM-based access control, and client-isolated subscription architecture.</div>
+                    <div class="case-card-title">Zero Trust Landing Zone — Financial Services</div>
+                    <div class="case-card-desc">Architected an identity-centric Azure Landing Zone for a global investment bank, replacing legacy perimeter defences with Zero Trust micro-segmentation. Implemented PAM-based privileged access control via Azure PIM, subscription-level isolation with Azure Policy guardrails, Conditional Access policies with MFA enforcement, and network segmentation using NSG flow logs and Azure Firewall. Integrated Microsoft Sentinel SIEM for real-time threat detection across all subscriptions, ensuring regulatory alignment with SOC 2, ISO 27001, and NIST 800-53 frameworks.</div>
                     <div class="case-card-metrics">
                         <div class="case-metric"><div class="case-metric-value">50+</div><div class="case-metric-label">Subscriptions</div></div>
                         <div class="case-metric"><div class="case-metric-value">Zero</div><div class="case-metric-label">Trust Gaps</div></div>
@@ -1039,8 +1081,8 @@
                     <div class="case-card-tags">
                         <span class="case-tag">AWS</span><span class="case-tag">GenAI</span><span class="case-tag">Secure SDLC</span>
                     </div>
-                    <div class="case-card-title">Securing GenAI Pipelines at GE Vernova</div>
-                    <div class="case-card-desc">Pioneered a Secure SDLC framework for Generative AI, hardening AWS Bedrock and SageMaker pipelines with programmatic security controls, prompt injection mitigation, and cost governance.</div>
+                    <div class="case-card-title">Securing GenAI Pipelines — Energy Infrastructure</div>
+                    <div class="case-card-desc">Designed a Secure SDLC framework for Generative AI at a Fortune 100 energy company. Hardened 12+ AWS Bedrock and SageMaker-based pipelines with VPC-isolated endpoints, IAM session policies, model artifact encryption (KMS), and S3 bucket policies preventing cross-account data leakage. Built automated prompt injection detection using custom Lambda validators, implemented cost governance with AWS Budgets and tagging enforcement, and delivered multi-region HA with OpenShift canary deployments for inference workloads.</div>
                     <div class="case-card-metrics">
                         <div class="case-metric"><div class="case-metric-value">12+</div><div class="case-metric-label">Pipelines Secured</div></div>
                         <div class="case-metric"><div class="case-metric-value">99.95%</div><div class="case-metric-label">Availability</div></div>
@@ -1056,12 +1098,46 @@
                     <div class="case-card-tags">
                         <span class="case-tag">CASPER</span><span class="case-tag">IaC</span><span class="case-tag">OPA/Rego</span>
                     </div>
-                    <div class="case-card-title">CASPER — Automated Compliance Remediation</div>
-                    <div class="case-card-desc">Engineered a self-service compliance framework leveraging Infrastructure as Code, Rego policy validation, and Azure Functions for automated remediation of non-compliant cloud resources.</div>
+                    <div class="case-card-title">CASPER — Automated Compliance Remediation Engine</div>
+                    <div class="case-card-desc">Built a self-service IaC-driven compliance remediation framework for multi-cloud environments. CASPER uses Rego/OPA policy packs to evaluate Azure and AWS resources against CIS, NIST, and SOC 2 controls, then triggers Azure Functions to auto-remediate non-compliant configurations (storage encryption, NSG rules, key rotation). Integrated with Terraform Enterprise Sentinel policies for preventive guardrails and Slack/Teams alerting for drift detection across 3 regulated clients.</div>
                     <div class="case-card-metrics">
                         <div class="case-metric"><div class="case-metric-value">80%</div><div class="case-metric-label">Less Audit Effort</div></div>
                         <div class="case-metric"><div class="case-metric-value">3</div><div class="case-metric-label">Regulated Clients</div></div>
                         <div class="case-metric"><div class="case-metric-value">Auto</div><div class="case-metric-label">Remediation</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="case-card reveal reveal-delay-4">
+                <div class="case-card-banner case-banner-4">
+                    <div class="case-banner-icon">🧪</div>
+                </div>
+                <div class="case-card-body">
+                    <div class="case-card-tags">
+                        <span class="case-tag">SageMaker</span><span class="case-tag">CloudFormation</span><span class="case-tag">MLOps</span><span class="case-tag">KMS</span>
+                    </div>
+                    <div class="case-card-title">Secure MLOps Pipeline — SageMaker on AWS</div>
+                    <div class="case-card-desc">Designed an end-to-end secure ML pipeline on AWS SageMaker, fully orchestrated via CloudFormation. The pipeline spans data ingestion from S3 (server-side encryption with customer-managed KMS keys), automated data preparation using SageMaker Processing Jobs in VPC-isolated subnets, model training on managed spot instances with encrypted EBS volumes, hyperparameter tuning, model evaluation against accuracy baselines, and a human-in-the-loop Model Approval step via SageMaker Model Registry. Published models are deployed to real-time inference endpoints behind API Gateway with IAM auth, WAF rate limiting, and CloudWatch anomaly detection. Implemented SBOM generation for container images used in training, Trivy scanning in the build stage, and cost controls via AWS Budgets and Savings Plans tagging per experiment.</div>
+                    <div class="case-card-metrics">
+                        <div class="case-metric"><div class="case-metric-value">E2E</div><div class="case-metric-label">Automated</div></div>
+                        <div class="case-metric"><div class="case-metric-value">KMS</div><div class="case-metric-label">Encrypted</div></div>
+                        <div class="case-metric"><div class="case-metric-value">VPC</div><div class="case-metric-label">Isolated</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="case-card reveal reveal-delay-5">
+                <div class="case-card-banner case-banner-5">
+                    <div class="case-banner-icon">🛡️</div>
+                </div>
+                <div class="case-card-body">
+                    <div class="case-card-tags">
+                        <span class="case-tag">Kubernetes</span><span class="case-tag">CIS Benchmarks</span><span class="case-tag">Prisma Cloud</span><span class="case-tag">Kyverno</span>
+                    </div>
+                    <div class="case-card-title">K8s CIS Compliance — Insurance Hybrid Cloud</div>
+                    <div class="case-card-desc">Applied CIS Kubernetes Benchmarks across 30+ production clusters spanning on-prem, EKS, and AKS for a leading insurance group. Deployed Prisma Cloud Defender as a DaemonSet for runtime threat detection, wrote 40+ Kyverno ClusterPolicies enforcing Pod Security Standards (restricted profile), mandatory resource limits, image pull policies from approved registries, and network policy isolation per namespace. Built Grafana dashboards for compliance posture scoring and automated weekly audit reports via CronJobs.</div>
+                    <div class="case-card-metrics">
+                        <div class="case-metric"><div class="case-metric-value">30+</div><div class="case-metric-label">Clusters</div></div>
+                        <div class="case-metric"><div class="case-metric-value">100%</div><div class="case-metric-label">CIS Compliant</div></div>
+                        <div class="case-metric"><div class="case-metric-value">40+</div><div class="case-metric-label">Policies</div></div>
                     </div>
                 </div>
             </div>
@@ -1089,12 +1165,14 @@
                     </div>
                 </div>
                 <h3>Terraform AWS Security Baseline</h3>
-                <p>Production-ready Terraform modules for deploying hardened AWS infrastructure — VPC, security groups, IAM roles, S3 encryption, CloudTrail, and GuardDuty integration.</p>
+                <p>Production-ready Terraform modules for deploying a hardened AWS foundation — multi-AZ VPC with flow logs, least-privilege IAM roles with permission boundaries, S3 default encryption (SSE-KMS), CloudTrail with log file validation, GuardDuty threat intel feeds, Config rules for drift detection, and Security Hub aggregation. Includes Sentinel policy-as-code checks and GitHub Actions CI for plan validation.</p>
                 <div class="project-card-tech">
                     <span class="project-tech-tag">Terraform</span>
                     <span class="project-tech-tag">AWS</span>
                     <span class="project-tech-tag">IAM</span>
                     <span class="project-tech-tag">CloudTrail</span>
+                    <span class="project-tech-tag">GuardDuty</span>
+                    <span class="project-tech-tag">Sentinel</span>
                 </div>
             </div>
             <div class="project-card reveal reveal-delay-2">
@@ -1107,11 +1185,12 @@
                     </div>
                 </div>
                 <h3>Dockerfile Security Linter</h3>
-                <p>Python-based scanner that analyzes Dockerfiles for vulnerabilities — root user detection, hardcoded secrets, base image security scoring, and CI/CD-ready reporting.</p>
+                <p>CLI tool that statically analyses Dockerfiles against CIS Docker Benchmark rules — detects root-user containers, hardcoded secrets (regex + entropy scoring), unpinned base images, unnecessary packages, exposed ports, and missing HEALTHCHECK directives. Outputs JSON/SARIF reports for integration with GitHub Advanced Security code scanning and CI/CD quality gates.</p>
                 <div class="project-card-tech">
                     <span class="project-tech-tag">Python</span>
                     <span class="project-tech-tag">Docker</span>
-                    <span class="project-tech-tag">Security</span>
+                    <span class="project-tech-tag">CIS Benchmarks</span>
+                    <span class="project-tech-tag">SARIF</span>
                     <span class="project-tech-tag">CLI</span>
                 </div>
             </div>
@@ -1125,12 +1204,51 @@
                     </div>
                 </div>
                 <h3>Kubernetes Security Policies</h3>
-                <p>Production-ready K8s security policies using OPA/Rego and Kyverno — Pod Security Standards, Network Policies, RBAC templates, and admission control guardrails.</p>
+                <p>Battle-tested K8s policy library using OPA/Rego and Kyverno — enforces Pod Security Standards (baseline + restricted profiles), mandatory resource limits, image allowlists from private registries, network policy isolation, RBAC role templates with least-privilege, and admission webhook validations. Includes Helm chart for one-command deployment and Prometheus metrics for policy violation dashboards.</p>
                 <div class="project-card-tech">
                     <span class="project-tech-tag">Kubernetes</span>
                     <span class="project-tech-tag">OPA/Rego</span>
                     <span class="project-tech-tag">Kyverno</span>
+                    <span class="project-tech-tag">Helm</span>
                     <span class="project-tech-tag">YAML</span>
+                </div>
+            </div>
+            <div class="project-card reveal reveal-delay-4">
+                <div class="project-card-header">
+                    <div class="project-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <div class="project-card-links">
+                        <a href="https://github.com/vatsayanvivek/sagemaker-secure-mlops" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                    </div>
+                </div>
+                <h3>SageMaker Secure MLOps Pipeline</h3>
+                <p>CloudFormation-based MLOps reference architecture for AWS SageMaker — covers data preparation in VPC-isolated Processing Jobs, model training with encrypted EBS, hyperparameter tuning, Model Registry with approval gates, real-time inference endpoints behind API Gateway + WAF, and automated model retraining triggers via EventBridge. All artifacts signed and SBOM-tracked.</p>
+                <div class="project-card-tech">
+                    <span class="project-tech-tag">SageMaker</span>
+                    <span class="project-tech-tag">CloudFormation</span>
+                    <span class="project-tech-tag">KMS</span>
+                    <span class="project-tech-tag">API Gateway</span>
+                    <span class="project-tech-tag">EventBridge</span>
+                </div>
+            </div>
+            <div class="project-card reveal reveal-delay-5">
+                <div class="project-card-header">
+                    <div class="project-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    </div>
+                    <div class="project-card-links">
+                        <a href="https://github.com/vatsayanvivek/genai-security-controls" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                    </div>
+                </div>
+                <h3>GenAI Security Controls Framework</h3>
+                <p>Comprehensive security control library for Generative AI workloads — prompt injection detection patterns, model input/output sanitization middleware, Bedrock/OpenAI token budget enforcement, data classification guards for PII/PHI in training data, model drift alerting via CloudWatch, and Terraform modules for deploying hardened LLM inference endpoints with private networking.</p>
+                <div class="project-card-tech">
+                    <span class="project-tech-tag">Bedrock</span>
+                    <span class="project-tech-tag">OpenAI</span>
+                    <span class="project-tech-tag">Python</span>
+                    <span class="project-tech-tag">Terraform</span>
+                    <span class="project-tech-tag">Lambda</span>
                 </div>
             </div>
         </div>
@@ -1192,7 +1310,7 @@
 (function(){var c=document.getElementById('particles-canvas'),x=c.getContext('2d'),w,h,p=[],m={x:-1e3,y:-1e3};function i(){r();p=[];for(var j=0;j<80;j++)p.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2+1,c:Math.random()>.5?'0,229,255':'124,77,255'});}function r(){w=c.width=innerWidth;h=c.height=innerHeight;}function a(){x.clearRect(0,0,w,h);p.forEach(function(q,j){q.x+=q.vx;q.y+=q.vy;if(q.x<0||q.x>w)q.vx*=-1;if(q.y<0||q.y>h)q.vy*=-1;x.beginPath();x.arc(q.x,q.y,q.r,0,Math.PI*2);x.fillStyle='rgba('+q.c+',0.6)';x.fill();for(var k=j+1;k<p.length;k++){var b=p[k],dx=q.x-b.x,dy=q.y-b.y,d=Math.sqrt(dx*dx+dy*dy);if(d<150){x.beginPath();x.moveTo(q.x,q.y);x.lineTo(b.x,b.y);x.strokeStyle='rgba(0,229,255,'+(0.12*(1-d/150))+')';x.lineWidth=.5;x.stroke();}}var mx=q.x-m.x,my=q.y-m.y,md=Math.sqrt(mx*mx+my*my);if(md<200){x.beginPath();x.moveTo(q.x,q.y);x.lineTo(m.x,m.y);x.strokeStyle='rgba(0,229,255,'+(0.25*(1-md/200))+')';x.lineWidth=.8;x.stroke();}});requestAnimationFrame(a);}addEventListener('resize',r);addEventListener('mousemove',function(e){m.x=e.clientX;m.y=e.clientY;});addEventListener('mouseout',function(){m.x=-1e3;m.y=-1e3;});i();a();})();
 
 // TYPING
-(function(){var t=['Cloud Security Architect','AWS Solutions Architect Pro','Certified Kubernetes Administrator','Zero Trust Specialist','DevSecOps Engineer'],el=document.getElementById('typed-text'),ti=0,ci=0,del=false;function type(){var c=t[ti];if(del){el.textContent=c.substring(0,ci--);if(ci<0){del=false;ti=(ti+1)%t.length;setTimeout(type,400);return;}setTimeout(type,30);}else{el.textContent=c.substring(0,ci++);if(ci>c.length){del=true;setTimeout(type,2000);return;}setTimeout(type,60);}}setTimeout(type,1200);})();
+(function(){var t=['Cloud Security Architect','AWS Solutions Architect Pro','Certified Kubernetes Administrator','Zero Trust Specialist','DevSecOps Engineer','Secure GenAI Engineer','MLOps Security Architect'],el=document.getElementById('typed-text'),ti=0,ci=0,del=false;function type(){var c=t[ti];if(del){el.textContent=c.substring(0,ci--);if(ci<0){del=false;ti=(ti+1)%t.length;setTimeout(type,400);return;}setTimeout(type,30);}else{el.textContent=c.substring(0,ci++);if(ci>c.length){del=true;setTimeout(type,2000);return;}setTimeout(type,60);}}setTimeout(type,1200);})();
 
 // SCROLL REVEAL
 (function(){var o=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('active');});},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(function(el){o.observe(el);});})();
